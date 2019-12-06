@@ -91,8 +91,6 @@
 
 - (void)batchedArray:(FUIBatchedArray *)array
    didUpdateWithDiff:(FUISnapshotArrayDiff<FIRDocumentSnapshot *> *)diff {
-  [self.tableView beginUpdates];
-
   NSMutableArray *deletedIndexPaths =
       [NSMutableArray arrayWithCapacity:diff.deletedIndexes.count];
   for (NSNumber *deletedIndex in diff.deletedIndexes) {
@@ -153,7 +151,7 @@
 
 - (void)batchedArray:(nonnull FUIBatchedArray *)array
   willUpdateWithDiff:(nonnull FUISnapshotArrayDiff<FIRDocumentSnapshot *> *)diff {
-  // do nothing
+  [self.tableView beginUpdates];
 }
 
 
