@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'FirebaseUI'
-  s.version      = '8.3.1'
+  s.version      = '8.4.2'
   s.summary      = 'UI binding libraries for Firebase.'
   s.homepage     = 'https://github.com/firebase/FirebaseUI-iOS'
   s.license      = { :type => 'Apache 2.0', :file => 'LICENSE' }
@@ -37,7 +37,7 @@ Pod::Spec.new do |s|
     storage.public_header_files = 'Storage/FirebaseStorageUI/*.h'
     storage.source_files = 'Storage/FirebaseStorageUI/*.{h,m}'
     storage.dependency 'Firebase/Storage', '~> 6.0'
-    storage.dependency 'SDWebImage', '~> 5.0'
+    storage.dependency 'SDWebImage', '~> 5.6'
     storage.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(PODS_ROOT)/FirebaseUI/FirebaseStorageUI' }
   end
 
